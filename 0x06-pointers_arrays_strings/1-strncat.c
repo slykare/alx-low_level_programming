@@ -1,20 +1,37 @@
 #include "main.h"
 
 /**
- * _strncpy - check the code.
- * @dest: an input  string.
- * @src: an input string.
- * @n: an input integer.
- * Return: a pointer to the resulting string.
+ * _strncat - two words
+ *
+ * @dest : pointer to char param
+ *
+ * @src : pointer to char param
+ *
+ * @n : int parameter
+ *
+ * Return: *dest
  */
-char *_strncpy(char *dest, char *src, int n)
+
+char *_strncat(char *dest, char *src, int n)
 {
+	int m;
 	int i;
 
-	for (i = 0; i < n && src[i] != '\0'; i++)
-		dest[i] = src[i];
-	for (; i < n; i++)
-		dest[i] = '\0';
+	m = 0;
 
+	for (i = 0; i < 1000; i++)
+	{
+		if (dest[i] == '\0')
+		{
+			break;
+		}
+		m++;
+	}
+
+	for (i = 0; src[i] != '\0' && i < n; i++)
+	{
+		dest[m + i] = src[i];
+	}
+	dest[m + i] = '\0';
 	return (dest);
 }

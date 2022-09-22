@@ -1,4 +1,4 @@
-#include <stdio.hfunction - it adds to numbers
+#include <stdio.h>
 
 int main(void);
 {
